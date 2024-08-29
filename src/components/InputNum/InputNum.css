@@ -1,0 +1,70 @@
+.input-num {
+  display: grid;
+  justify-items: start;
+  align-items: stretch;
+  gap: .5rem;
+  transition: all 150ms ease-in-out;
+
+  > .input-num__group {
+    display: flex;
+    border: solid 1px var(--slate-700);
+    justify-self: stretch;
+    overflow: hidden;
+    border-radius: .250rem;
+    font-weight: 700;
+    height: 2.5rem;
+    transition: inherit;
+
+    > .input-num__input {
+      font-weight: 700;
+      font-size: 1rem;
+      color: inherit;
+      flex: 1;
+      background-color: transparent;
+      border: none;
+      outline: none;
+    }
+
+    > .input-num__secundary {
+      padding-inline: .75rem;
+      background-color: var(--slate-100);
+      display: grid;
+      place-content: center;
+      transition: inherit;
+    }
+  }
+
+  .input-num__error {
+    display: none;
+    color: var(--red);
+  }
+
+  > .input-num__group_invert {
+    flex-direction: row-reverse;
+  }
+
+  &:has(:focus) {
+    .input-num__group {
+      border-color: var(--lime);
+    }
+
+    .input-num__secundary {
+      background-color: var(--lime);
+    }
+  }
+
+  &:has(:user-invalid) {
+    .input-num__group {
+      border-color: var(--red);
+    }
+
+    .input-num__secundary {
+      background-color: var(--red);
+      color: white;
+    }
+
+    .input-num__error {
+      display: block;
+    }
+  }
+}
