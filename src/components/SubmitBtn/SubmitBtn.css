@@ -1,0 +1,21 @@
+.submit-btn {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  background-color: var(--lime);
+  width: fit-content;
+  border-radius: 3rem;
+  padding: .5rem 2rem;
+  transition: all 150ms ease-in-out;
+
+  .submit-btn__title {
+    font-family: "PlusJakartaSans";
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--slate-900);
+  }
+
+  &:hover {
+    background-color: var(--lime-opa-70);
+  }
+}
