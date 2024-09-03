@@ -23,6 +23,7 @@
       background-color: transparent;
       border: none;
       outline: none;
+      padding-inline: .75rem;
     }
 
     > .input-num__secundary {
