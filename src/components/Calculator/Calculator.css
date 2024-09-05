@@ -1,0 +1,44 @@
+.calculator {
+  display: grid;
+  row-gap: 1.125rem;
+  color: var(--slate-700);
+  background-color: white;
+  padding: 2rem 1.25rem;
+  max-width: 25rem;
+
+  .calculator__hgroup {
+    display: flex;
+    align-items: center;
+
+    .calculator__title {
+      font-size: 1.5rem;
+      color: var(--slate-900);
+    }
+
+    .calculator__reset {
+      background-color: transparent;
+      color: inherit;
+      text-decoration: underline;
+    }
+  }
+
+  @media screen and (width > 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.5rem;
+
+    > :not(:nth-child(n+3):where(:nth-child(-n+4))) {
+      grid-column: span 2;
+    }
+
+    .calculator__hgroup {
+      justify-content: space-between;
+    }
+  }
+
+  @media screen and (width < 769px) {
+    .calculator__hgroup {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}
