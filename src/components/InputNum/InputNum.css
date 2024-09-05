@@ -1,25 +1,23 @@
 .input-num {
   display: grid;
-  justify-items: start;
-  align-items: stretch;
+  align-content: start;
   gap: .5rem;
   transition: all 150ms ease-in-out;
 
   > .input-num__group {
     display: flex;
     border: solid 1px var(--slate-700);
-    justify-self: stretch;
     overflow: hidden;
     border-radius: .250rem;
     font-weight: 700;
     height: 2.5rem;
     transition: inherit;
 
-    > .input-num__input {
+    > .input-num__item {
       font-weight: 700;
       font-size: 1rem;
       color: inherit;
-      flex: 1;
+      width: 100%;
       background-color: transparent;
       border: none;
       outline: none;

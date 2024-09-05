@@ -26,7 +26,7 @@ export default function InputNum({
         <p className='input-num__name'>{name}</p>
         <div className={`input-num__group${invert ? " input-num__group_invert" : ""}`}>
           <input 
-            className={`input-num__input`} 
+            className={`input-num__item`} 
             name={name} 
             type='text' 
             inputMode='numeric'
