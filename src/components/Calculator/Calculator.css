@@ -4,7 +4,6 @@
   color: var(--slate-700);
   background-color: white;
   padding: 2rem 1.25rem;
-  max-width: 25rem;
 
   .calculator__hgroup {
     display: flex;
@@ -13,6 +12,10 @@
     .calculator__title {
       font-size: 1.5rem;
       color: var(--slate-900);
+
+      @media screen and (width < 791px) and (width > 768px) {
+        font-size: 1.4rem;
+      }
     }
 
     .calculator__reset {
