@@ -4,6 +4,7 @@ import InputNum from "../InputNum/InputNum.tsx"
 import SubmitBtn from "../SubmitBtn/SubmitBtn.tsx";
 import Radio from "../Radio/Radio.tsx";
 import Form from "../Form/Form.tsx";
+import { formatCurrency } from "../../utils/functions.tsx";
 
 const names = ["Mortgage Amount", "Mortgage Term", "Interest Rate"] as const;
 const [amount, term, rate] = names;
@@ -35,8 +36,8 @@ function processMortgage(form: CalculatorFields) {
   }
 
   return {
-    monthly: formula.toFixed(2), 
-    total: (formula * termAsNum).toFixed(2),
+    monthly: formatCurrency(formula),
+    total: formatCurrency(formula * termAsNum),
   };
 }
 
