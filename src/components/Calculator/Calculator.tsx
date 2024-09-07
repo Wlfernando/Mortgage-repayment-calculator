@@ -44,7 +44,7 @@ function processMortgage(form: CalculatorFields) {
 export default function Calculator({ reset, onSubmit: handleSubmit }: {reset: Function, onSubmit: Function}) {
   const [form, setForm] = useState(voidForm as unknown as CalculatorFields);
 
-  function onChange (name: string, value: string) {
+  function collectValue(name: string, value: string) {
     setForm(form => ({ ...form, [name]: value }))
   }
 
@@ -60,10 +60,10 @@ export default function Calculator({ reset, onSubmit: handleSubmit }: {reset: Fu
           <h1 className="calculator__title">Mortgage Calculator</h1>
           <button className="calculator__reset" type="button" onClick={() => reset()}>Clear All</button>
         </hgroup>
-        <InputNum name={amount} secondary="£" invert onChange={onChange} value={form[amount]} />
-        <InputNum name={term} secondary="years" onChange={onChange} value={form[term]} />
-        <InputNum name={rate} secondary="%" onChange={onChange} value={form[rate]} />
-        <Radio options={radioOptions} name={mortgageType} onChange={onChange} value={form[mortgageType]} />
+        <InputNum name={amount} secondary="£" invert onChange={collectValue} value={form[amount]} onBlur={collectValue} />
+        <InputNum name={term} secondary="years" onChange={collectValue} value={form[term]} />
+        <InputNum name={rate} secondary="%" onChange={collectValue} value={form[rate]} />
+        <Radio options={radioOptions} name={mortgageType} onChange={collectValue} value={form[mortgageType]} />
         <SubmitBtn />
       </Form>
     </>
