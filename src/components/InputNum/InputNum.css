@@ -12,6 +12,7 @@
     font-weight: 700;
     height: 2.5rem;
     transition: inherit;
+    cursor: pointer;
 
     > .input-num__item {
       font-weight: 700;
@@ -22,6 +23,7 @@
       border: none;
       outline: none;
       padding-inline: .75rem;
+      cursor: inherit;
     }
 
     > .input-num__secundary {
