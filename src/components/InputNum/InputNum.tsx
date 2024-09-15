@@ -28,7 +28,7 @@ export default function InputNum({
     <>
       <label className='input-num'>
         <p className='input-num__name'>{name}</p>
-        <div className={`input-num__group${invert ? " input-num__group_invert" : ""}`}>
+        <span className={`input-num__group${invert ? " input-num__group_invert" : ""}`}>
           <input 
             className={`input-num__item`} 
             name={name} 
@@ -46,7 +46,7 @@ export default function InputNum({
             }}
           />
           <p className={`input-num__secundary`} >{secondary}</p>
-        </div>
+        </span>
         <span className='input-num__error'>This field is required</span>
       </label>
     </>
