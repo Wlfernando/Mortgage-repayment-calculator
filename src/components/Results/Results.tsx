@@ -17,7 +17,7 @@ export default function Result({
         {isIdle ?
           <>
             <img src={empty} alt="A financial sheet, calculator, pen, and money." />
-            <h2>Results shown here</h2>
+            <h2 className="results__title">Results shown here</h2>
             <p className="results__resume">Complete the form and click "calculate repayment" to se what your monthly repayments would be.</p>
           </> :
           <>
@@ -31,7 +31,7 @@ export default function Result({
               <hr className="results__hr" />
               <div>
                 <h3 className="results__sub-title">Total you'll repay over the term</h3>
-                <p>{total}</p>
+                <p className="results__total">{total}</p>
               </div>
             </article>
           </>
